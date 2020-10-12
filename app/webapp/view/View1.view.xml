@@ -4,7 +4,7 @@
 	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
 	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartField="sap.ui.comp.smartfield"
 	xmlns:l="sap.ui.layout" xmlns:chart="sap.suite.ui.commons" class="sapUiSizeCompact">
-	<Shell id="shell">
+	<Shell id="shell" >
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
