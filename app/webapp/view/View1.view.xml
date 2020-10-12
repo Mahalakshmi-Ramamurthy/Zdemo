@@ -1,0 +1,295 @@
+<mvc:View controllerName="com.app.app.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:u="sap.ui.unified" xmlns:f="sap.f" xmlns:card="sap.f.cards" xmlns:core="sap.ui.core" xmlns:microchart="sap.suite.ui.microchart"
+	xmlns:layout="sap.ui.layout" xmlns:data="sap.chart.data" xmlns:statusindicator="sap.suite.ui.commons.statusindicator" xmlns:tnt="sap.tnt"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:l="sap.ui.layout" xmlns:chart="sap.suite.ui.commons" class="sapUiSizeCompact">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<layout:BlockLayout background="Default" visible="true" class="">
+						<layout:content>
+							<layout:BlockLayoutRow scrollable="false">
+								<layout:content>
+									<layout:BlockLayoutCell width="7" titleAlignment="Begin" titleLevel="Auto" class="sapUiNoContentPadding" id="sybLeft">
+										<layout:content>
+											<GenericTile id="main_bam_tile" width="100%" class="sapUiSmallMarginBegin sapUiSmallMarginTop" header="{i18n>GenericTileTitle}"
+												press="onBAMTilePress" frameType="OneByOne" tileContent="{ path: '/RoleSizebyTcodeCritical', parameters: {select: 'ROLESIZEVALUE'} }">
+												<TileContent footer="{i18n>GenericTileTitleFooter}" frameType="OneByOne">
+													<NumericContent value="{ROLESIZEVALUE}" withMargin="false"/>
+												</TileContent>
+											</GenericTile>
+											<GenericTile id="main_bam_tile2" width="100%" class="sapUiSmallMarginBegin sapUiSmallMarginTop" header="{i18n>GenericTileTitleSecond}"
+												press="onBAMTilePress" frameType="OneByOne"
+												tileContent="{ path: '/SoDViolations', parameters: {select: 'VIOLATIONVALUE'}, filters: [{ path: 'VIOLATIONTYPE', operator: 'EQ', value1: 'SOD' }] }">
+												<TileContent footer="{i18n>GenericTileTitleSecondFooter}" frameType="OneByOne">
+													<NumericContent value="{VIOLATIONVALUE}" withMargin="false"/>
+												</TileContent>
+											</GenericTile>
+											<l:VerticalLayout class="sapUiLargeMarginTop sapUiSmallMarginBegin">
+												<l:VerticalLayout>
+													<Label text="System"/>
+													<ComboBox width="100%" id="filterSystem" items="{/FilterValues/System}" class="" selectionChange="onSystemSelectionChange"
+														selectedKey="{staticData>/SystemSelectedKey}">
+														<core:Item key="{SYSTEM}" text="{SYSTEM}"/>
+													</ComboBox>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Label text="Company Code"/>
+													<ComboBox width="100%" id="filterCompanyCode" items="{/FilterValues/CompanyCode}" class="" selectionChange="onCompanyCodeSelectionChange"
+														selectedKey="{staticData>/CompanyCodeSelectedKey}">
+														<core:Item key="{COMPANYCODE}" text="{COMPANYCODE}"/>
+													</ComboBox>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Label text="Acct. Group"/>
+													<ComboBox width="100%" id="filterAcctGrp" items="{/FilterValues/AcctGroup}" class="" selectionChange="onAcctGroupSelectionChange"
+														selectedKey="{staticData>/AcctGrpSelectedKey}">
+														<core:Item key="{ACCTGROUP}" text="{ACCTGROUP}"/>
+													</ComboBox>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Label text="Period"/>
+													<ComboBox id="filterRangeTypeText" items="{/FilterValues/Period}" class="" selectionChange="onRangeTypeTextSelectionChange"
+														selectedKey="{staticData>/PeriodSelectedKey}">
+														<core:Item key="{PERIOD}" text="{PERIOD}"/>
+													</ComboBox>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Label text="Period Value"/>
+													<ComboBox id="filterRangeValueDesc" items="{/FilterValues/PeriodValue}" class="" selectionChange="onRangeTypeDescSelectionChange"
+														selectedKey="{staticData>/PeriodValueSelectedKey}">
+														<core:Item key="{PERIODVALUE}" text="{PERIODVALUE}"/>
+													</ComboBox>
+												</l:VerticalLayout>
+											</l:VerticalLayout>
+										</layout:content>
+									</layout:BlockLayoutCell>
+									<layout:BlockLayoutCell width="30" titleAlignment="Begin" titleLevel="Auto" class="sapUiNoContentPadding">
+										<layout:content>
+											<layout:BlockLayout background="Dashboard" visible="true">
+												<layout:content>
+													<layout:BlockLayoutRow scrollable="false">
+														<layout:content>
+															<layout:BlockLayoutCell width="16" title="" titleAlignment="Begin" titleLevel="Auto" class="sapUiNoContentPadding">
+																<layout:content>
+																	<VBox>
+																		<chart:ChartContainer showFullScreen="true" width="100%" autoAdjustHeight="true" showLegendButton="true" showZoom="false">
+																			<chart:toolbar>
+																				<OverflowToolbar >
+																					<Title text="{i18n>RightsideUpperleftTitle}" width="auto" wrapping="true" textAlign="Begin" visible="true" titleStyle="H3"
+																						class="sapUiTinyMargin"/>
+																					<ToolbarSpacer/>
+																					<Link text="Details" press="onTopLeftPress"/>
+																					<chart:ChartContainerToolbarPlaceholder></chart:ChartContainerToolbarPlaceholder>
+																				</OverflowToolbar>
+																			</chart:toolbar>
+																			<chart:content>
+																				<chart:ChartContainerContent icon="sap-icon://pie-chart">
+																					<chart:content>
+																						<viz:Popover id="idPiePopOver"></viz:Popover>
+																						<viz:VizFrame id="main_pie_chart" busy="false" busyIndicatorDelay="1000" visible="true" uiConfig="{ 'applicationSet': 'fiori' }"
+																							vizType="column" legendVisible="true" width="100%" height="40vh">
+																							<viz:feeds>
+																								<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="FieldType"/>
+																								<viz.feeds:FeedItem uid="color" type="Dimension" values="FieldType"/>
+																								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="RoleSizeValue"/>
+																							</viz:feeds>
+																						</viz:VizFrame>
+																					</chart:content>
+																				</chart:ChartContainerContent>
+																			</chart:content>
+																		</chart:ChartContainer>
+																	</VBox>
+																</layout:content>
+															</layout:BlockLayoutCell>
+															<layout:BlockLayoutCell width="16px" title="" titleAlignment="Begin" titleLevel="Auto">
+																<layout:content>
+																	<VBox>
+																		<chart:ChartContainer id="chartContainerLineChart" showFullScreen="true" width="100%" autoAdjustHeight="false" showLegendButton="true"
+																			showZoom="false">
+																			<chart:toolbar>
+																				<OverflowToolbar >
+																					<Title text="{i18n>RightsideUpperrightTitle}" width="auto" wrapping="true" textAlign="Begin" visible="true" titleStyle="H3"
+																						class="sapUiTinyMargin"/>
+																					<ToolbarSpacer/>
+																					<chart:ChartContainerToolbarPlaceholder></chart:ChartContainerToolbarPlaceholder>
+																				</OverflowToolbar>
+																			</chart:toolbar>
+																			<chart:content>
+																				<chart:ChartContainerContent icon="sap-icon://line-chart">
+																					<chart:content>
+																						<viz:VizFrame vizType='stacked_combination' id="main_line_chart" busy="false" busyIndicatorDelay="1000" visible="true"
+																							uiConfig="{ 'applicationSet': 'fiori' }" legendVisible="true" width="100%" height="40vh">
+																							<viz:feeds>
+																								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Revenue"/>
+																								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Bank Detail"/>
+																								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Payment Terms"/>
+																								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Bank No."/>
+																								<viz.feeds:FeedItem id="feedCategoryAxis" uid="categoryAxis" type="Dimension" values="Period"/>
+																							</viz:feeds>
+																						</viz:VizFrame>
+																					</chart:content>
+																				</chart:ChartContainerContent>
+																			</chart:content>
+																		</chart:ChartContainer>
+																	</VBox>
+																</layout:content>
+															</layout:BlockLayoutCell>
+														</layout:content>
+													</layout:BlockLayoutRow>
+													<layout:BlockLayoutRow scrollable="false">
+														<layout:content>
+															<layout:BlockLayoutCell width="16px" title="" titleAlignment="Begin" titleLevel="Auto">
+																<layout:content>
+																	<VBox>
+																		<chart:ChartContainer showFullScreen="true" title="" width="100%" autoAdjustHeight="true" showLegendButton="true" showZoom="false">
+																			<chart:toolbar>
+																				<OverflowToolbar >
+																					<Title text="{i18n>RightsideLowerleftTitle}" width="auto" wrapping="true" textAlign="Begin" visible="true" titleStyle="H3"
+																						class="sapUiTinyMargin"/>
+																					<ToolbarSpacer/>
+																					<Link text="Details" press="onBottomLeftPress"/>
+																					<chart:ChartContainerToolbarPlaceholder></chart:ChartContainerToolbarPlaceholder>
+																				</OverflowToolbar>
+																			</chart:toolbar>
+																			<chart:content>
+																				<chart:ChartContainerContent icon="sap-icon://pie-chart">
+																					<chart:content>
+																						<viz:Popover id="idPiePopOver2"></viz:Popover>
+																						<viz:VizFrame id="main_pie_chart2" busy="false" busyIndicatorDelay="1000" visible="true" uiConfig="{ 'applicationSet': 'fiori' }"
+																							vizType="bar" legendVisible="true" width="100%" height="39vh">
+																							<viz:feeds>
+																								<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Suppliers"/>
+																								<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Years"/>
+																								<!-- <viz.feeds:FeedItem uid="color" type="Dimension" values="roleSize"/>
+																								<viz.feeds:FeedItem uid="size" type="Measure" values="RoleSizeValue"/> -->
+																							</viz:feeds>
+																						</viz:VizFrame>
+																					</chart:content>
+																				</chart:ChartContainerContent>
+																			</chart:content>
+																		</chart:ChartContainer>
+																	</VBox>
+																</layout:content>
+															</layout:BlockLayoutCell>
+															<layout:BlockLayoutCell width="16px" title="" titleAlignment="Begin" titleLevel="Auto">
+																<layout:content>
+																	<VBox>
+																		<!-- <smartTable:SmartTable id="main_SmartTable" entitySet="SoDViolations" tableType="Table" useExportToExcel="true" useVariantManagement="false" header="{i18n>RightsideLowerTable}" enableAutoBinding="true" showRowCount="false" customToolbar="Toolbar" growingScrollToLoad="true" demandPopin="true" class="sapUiResponsiveContentPadding" placeToolbarInTable="true" showFullScreenButton="true" initiallyVisibleFields="SYSTEM,PERIODVALUE,VIOLATIONTYPE,PERIOD,VIOLATIONVALUE">
+																			<smartTable:customToolbar>
+																				<OverflowToolbar design="Transparent">
+																					<ToolbarSpacer/>
+																					<Link text="Role Analysis" press="onRoleAnalysisPress"/>
+																				</OverflowToolbar>
+																			</smartTable:customToolbar>
+																			<Table sticky="ColumnHeaders,HeaderToolbar" id="idTableSimilarDetails" itemPress="handleSimilarDetailsItemPress" mode="None" growingScrollToLoad="true" growingThreshold="100000" updateFinished="onTableUpdateFinished">
+																				<items>
+																					<ColumnListItem type="Active"></ColumnListItem>
+																				</items>
+																			</Table>
+																		</smartTable:SmartTable> -->
+																		<smartTable:SmartTable id="main_SmartTable" smartFilterId="smartFilterBar" tableType="ResponsiveTable" placeToolbarInTable="true"
+																			useExportToExcel="true" useVariantManagement="false" useTablePersonalisation="true" header="" showRowCount="false" enableAutoBinding="true"
+																			demandPopin="true" class="sapUiResponsiveContentPadding" height="38vh" beforeRebindTable="onBeforeRebindTable"
+																			initiallyVisibleFields="SYSTEM,PERIODVALUE,VIOLATIONTYPE">
+																			<smartTable:customToolbar>
+																				<OverflowToolbar design="Transparent">
+																					<Title text="{i18n>RightsideLowerrightTitle}" width="auto" wrapping="true" textAlign="Begin" visible="true" titleStyle="H3"
+																						class="sapUiTinyMargin"/>
+																					<ToolbarSpacer/>
+																					<Link text="Details" press="onRoleAnalysisPress"/>
+																				</OverflowToolbar>
+																			</smartTable:customToolbar>
+																			<smartTable:layoutData>
+																				<FlexItemData growFactor="1" baseSize="0%"/>
+																			</smartTable:layoutData>
+																			<Table id="main_table" sticky="ColumnHeaders,HeaderToolbar" width="100%" noDataText="No data" mode="None" showSeparators="All"
+																				growing="true" growingThreshold="10" growingScrollToLoad="true" itemPress="_onTableItemPress">
+																				<columns>
+																					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+																						<header>
+																							<Text text="No. Of Sensitive Changes" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+																						</header>
+																						<footer/>
+																						<customData>
+																							<core:CustomData key="p13nData"
+																								value='\{"columnKey": "SYSTEM", "leadingProperty": "SYSTEM", "sortProperty": "SYSTEM", "filterProperty": "SYSTEM", "columnIndex": 0}'/>
+																						</customData>
+																					</Column>
+																					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																						<header>
+																							<Text text="User Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+																						</header>
+																						<footer/>
+																						<customData>
+																							<core:CustomData key="p13nData"
+																								value='\{"columnKey": "ROLENAME", "leadingProperty": "ROLENAME", "sortProperty": "ROLENAME", "filterProperty": "ROLENAME", "columnIndex": 0}'/>
+																						</customData>
+																					</Column>
+																					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																						<header>
+																							<Text text="User ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+																						</header>
+																						<footer/>
+																						<customData>
+																							<core:CustomData key="p13nData"
+																								value='\{"columnKey": "ROLEDESCRIPTION", "leadingProperty": "ROLEDESCRIPTION", "sortProperty": "ROLEDESCRIPTION", "filterProperty": "ROLEDESCRIPTION", "columnIndex": 0}'/>
+																						</customData>
+																					</Column>
+																					<!-- <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+<header>
+<Text text="No. of Users" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+</header>
+<footer/>
+<customData>
+<core:CustomData key="p13nData" value='\{"columnKey": "NUMBEROFUSERS", "leadingProperty": "NUMBEROFUSERS, "sortProperty": "NUMBEROFUSERS", "filterProperty": "NUMBEROFUSERS", "columnIndex": 0}'/>
+</customData>
+</Column> -->
+																				</columns>
+																				<items>
+																					<ColumnListItem type="Active">
+																						<cells>
+																							<ObjectIdentifier text="{SYSTEM}" titleActive="false" visible="true"/>
+																							<Text text="{ROLENAME}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+																							<ObjectNumber number="{ROLEDESCRIPTION}" emphasized="true" state="None"/>
+																							<!-- <ObjectNumber number="{NUMBEROFTCODE}" emphasized="true" state="None"/>
+<ObjectNumber number="{NUMBEROFTCODENOTEXECUTED}" emphasized="true" state="None"/>
+<ObjectNumber number="{NUMBEROFUSERS}" emphasized="true" state="None"/> -->
+																							<!-- <Text text="{NUMBEROFTCODE}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/> -->
+																							<!-- <Text text="{NUMBEROFTCODENOTEXECUTED}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/> -->
+																							<!-- <Text text="{NUMBEROFUSERS}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>  -->
+																						</cells>
+																					</ColumnListItem>
+																				</items>
+																			</Table>
+																		</smartTable:SmartTable>
+																	</VBox>
+																</layout:content>
+															</layout:BlockLayoutCell>
+														</layout:content>
+													</layout:BlockLayoutRow>
+												</layout:content>
+											</layout:BlockLayout>
+										</layout:content>
+									</layout:BlockLayoutCell>
+								</layout:content>
+							</layout:BlockLayoutRow>
+						</layout:content>
+					</layout:BlockLayout>
+					</content>
+					<footer>
+					<OverflowToolbar>
+						<Button type="Default" text="Settings" alignItems="Center"/>
+						<ToolbarSpacer alignItems="Center"/>
+						<Text text="{i18n>refreshedText}"/>
+						<Text text="{path: 'Refreshed>/LastExecutionDate', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'dd/MM/yyyy'  } }"/>
+					</OverflowToolbar>
+				</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

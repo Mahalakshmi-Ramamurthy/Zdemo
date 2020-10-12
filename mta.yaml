@@ -1,0 +1,82 @@
+ID: Zdemoapp
+_schema-version: '2.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: zdemoapp-approuter
+    type: approuter.nodejs
+    path: zdemoapp-approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: Zdemoapp_html5_repo_runtime
+      - name: uaa_Zdemoapp
+  - name: Zdemoapp_ui_deployer
+    type: com.sap.html5.application-content
+    path: Zdemoapp_ui_deployer
+    requires:
+      - name: Zdemoapp_html5_repo_host
+    build-parameters:
+      requires:
+        - name: app
+          artifacts:
+            - './*'
+          target-path: resources/app
+  - name: Zdemoapp-db
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 512M
+    requires:
+      - name: Zdemoapp-db-hdi-container
+  - name: Zdemoapp-srv
+    type: nodejs
+    path: srv
+    parameters:
+      memory: 512M
+      disk-quota: 512M
+    provides:
+      - name: srv_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: Zdemoapp-db-hdi-container
+  - name: app
+    type: html5
+    path: app
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+      supported-platforms: []
+      build-result: dist
+resources:
+  - name: Zdemoapp_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: Zdemoapp_html5_repo_host
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: Zdemoapp-db-hdi-container
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-container-name: '${service-name}'
+  - name: uaa_Zdemoapp
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: dest_Zdemoapp
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service

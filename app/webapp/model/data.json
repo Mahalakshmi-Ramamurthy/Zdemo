@@ -1,0 +1,839 @@
+{
+  "FilterValues": {
+    "System": [
+      {
+        "SYSTEM": "All"
+      },
+      {
+        "SYSTEM": "CWC"
+      }
+    ],
+    "CompanyCode": [
+      {
+        "COMPANYCODE": "US20"
+      },
+      {
+        "COMPANYCODE": "BE01"
+      },
+      {
+        "COMPANYCODE": "BR01"
+      }
+    ],
+    "AcctGroup": [
+      {
+        "ACCTGROUP": "SCPL"
+      },
+      {
+        "ACCTGROUP": "RSPL"
+      },
+      {
+        "ACCTGROUP": "ACBL"
+      },
+      {
+        "ACCTGROUP": "SALE"
+      }
+    ],
+    "Period": [
+      {
+        "PERIOD": "ANNUAL"
+      },
+      {
+        "PERIOD": "QUARTER"
+      },
+      {
+        "PERIOD": "MONTH"
+      },
+      {
+        "PERIOD": "WEEK"
+      }
+    ],
+    "PeriodValue": [
+      {
+        "SYSTEM": "CWC",
+        "PERIODVALUE": "JAN-2020",
+        "PERIOD": "MONTH"
+      },
+      {
+        "SYSTEM": "CWC",
+        "PERIODVALUE": "FEB-2020",
+        "PERIOD": "MONTH"
+      },
+      {
+        "SYSTEM": "CWC",
+        "PERIODVALUE": "MAR-2020",
+        "PERIOD": "MONTH"
+      },
+      {
+        "SYSTEM": "CWC",
+        "PERIODVALUE": "2020",
+        "PERIOD": "YEAR"
+      },
+      {
+        "SYSTEM": "CWC",
+        "PERIODVALUE": "DEC-20-2020",
+        "PERIOD": "WEEK"
+      },
+      {
+        "SYSTEM": "CWC",
+        "PERIODVALUE": "DEC-27-2020",
+        "PERIOD": "WEEK"
+      }
+    ]
+  },
+  "RangeValueOption": [
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "2020",
+      "PERIOD": "YEAR"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "2020",
+      "PERIOD": "YEAR"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "DEC-49-2020",
+      "PERIOD": "WEEK"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "DEC-49-2020",
+      "PERIOD": "WEEK"
+    }
+  ],
+  "RoleSizebyTcodeCritical": [
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "ROLESIZE": "50 <",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": "136"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "ROLESIZE": "50 <",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": "55"
+    }
+  ],
+  "RoleSizebyTcode": [
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Bank Detail",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 4,
+      "REVENUE": 20,
+      "MONTH": "NOV",
+      "ROLESIZEVALUE2": 8,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Payment Terms",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 9,
+      "REVENUE": 22,
+      "MONTH": "DEC",
+      "ROLESIZEVALUE2": 10,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Bank No.",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 4,
+      "REVENUE": 30,
+      "MONTH": "JAN",
+      "ROLESIZEVALUE2": 6,
+      "ROLESIZEVALUE3": 2,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Account No.",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 12,
+      "REVENUE": 32,
+      "MONTH": "FEB",
+      "ROLESIZEVALUE2": 13,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Bank Detail",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 8,
+      "REVENUE": 20,
+      "MONTH": "NOV",
+      "ROLESIZEVALUE2": 8,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Payment Terms",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 2,
+      "REVENUE": 22,
+      "MONTH": "DEC",
+      "ROLESIZEVALUE2": 10,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Bank No.",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 6,
+      "REVENUE": 30,
+      "MONTH": "JAN",
+      "ROLESIZEVALUE2": 12,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Account No.",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 4,
+      "REVENUE": 32,
+      "MONTH": "FEB",
+      "ROLESIZEVALUE2": 13,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    },
+
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Bank Detail",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 5,
+      "REVENUE": 20,
+      "MONTH": "NOV",
+      "ROLESIZEVALUE2": 8,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "RSPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Payment Terms",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 2,
+      "REVENUE": 22,
+      "MONTH": "DEC",
+      "ROLESIZEVALUE2": 10,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "RSPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Bank No.",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 7,
+      "REVENUE": 30,
+      "MONTH": "JAN",
+      "ROLESIZEVALUE2": 12,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "RSPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "FieldType": "Account No.",
+      "PERIOD": "MONTH",
+      "ROLESIZEVALUE": 6,
+      "REVENUE": 32,
+      "MONTH": "FEB",
+      "ROLESIZEVALUE2": 13,
+      "ROLESIZEVALUE3": 8,
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "RSPL"
+    }
+  ],
+  "SoDViolations": [
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "SOD",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "0"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "SOD",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "42"
+    }
+  ],
+  "RolesInherentSoD": [
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": ">5 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "12",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "RSPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "3-5 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "7",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "RSPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "1-3 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "10",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": ">5 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "24",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "3-5 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "6",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "1-3 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "13",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": ">5 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "20",
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "3-5 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "9",
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "VIOLATIONTYPE": "1-3 Years",
+      "PERIOD": "YEAR",
+      "VIOLATIONVALUE": "10",
+      "COMPANYCODE": "BE01",
+      "ACCTGRP": "SCPL"
+    }
+  ],
+  "ActionUsage": [
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "ROLENAME": "USERNAME0",
+      "PERIOD": "MONTH",
+      "ROLEDESCRIPTION": "USERID1",
+      "NUMBEROFTCODE": "10",
+      "NUMBEROFTCODENOTEXECUTED": "11",
+      "NUMBEROFUSERS": "12"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "ROLENAME": "USERNAME1",
+      "PERIOD": "MONTH",
+      "ROLEDESCRIPTION": "USERID2",
+      "NUMBEROFTCODE": "20",
+      "NUMBEROFTCODENOTEXECUTED": "21",
+      "NUMBEROFUSERS": "22"
+    },
+    {
+      "SYSTEM": "SAP",
+      "PERIODVALUE": "JAN-2020",
+      "ROLENAME": "USERNAME2",
+      "PERIOD": "MONTH",
+      "ROLEDESCRIPTION": "USERID3",
+      "NUMBEROFTCODE": "10",
+      "NUMBEROFTCODENOTEXECUTED": "11",
+      "NUMBEROFUSERS": "12"
+    },
+    {
+      "SYSTEM": "SAP",
+      "PERIODVALUE": "JAN-2020",
+      "ROLENAME": "USERNAME3",
+      "PERIOD": "MONTH",
+      "ROLEDESCRIPTION": "USERID4",
+      "NUMBEROFTCODE": "20",
+      "NUMBEROFTCODENOTEXECUTED": "21",
+      "NUMBEROFUSERS": "22"
+    }
+  ],
+  "UserCount": [
+    {
+      "SYSTEM": "All",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.01",
+      "ROLETYPE": "SE01",
+      "ROLENAME": "Supplier1",
+      "ROLEDESC": "UserID1",
+      "RISKTYPE": "SoD",
+      "NUMBEROFUSERS": "100",
+      "SUPPLIERNAME": "SUPPLIERNAME1",
+      "TRANSACTIONDATE": "08-10-2020",
+      "NEWVALUE": "NEWVALUE1",
+      "OLDVALUE": "OLDVALUE1",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.02",
+      "ROLENAME": "Supplier2",
+      "ROLETYPE": "SE38",
+      "ROLEDESC": "UserID2",
+      "RISKTYPE": "SA",
+      "NUMBEROFUSERS": "90",
+      "SUPPLIERNAME": "SUPPLIERNAME2",
+      "TRANSACTIONDATE": "08-09-2020",
+      "NEWVALUE": "NEWVALUE2",
+      "OLDVALUE": "OLDVALUE2",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.01",
+      "ROLETYPE": "MM01",
+      "ROLENAME": "Supplier3",
+      "ROLEDESC": "UserID3",
+      "RISKTYPE": "SoD",
+      "NUMBEROFUSERS": "101",
+      "SUPPLIERNAME": "SUPPLIERNAME3",
+      "TRANSACTIONDATE": "06-05-2020",
+      "NEWVALUE": "NEWVALUE3",
+      "OLDVALUE": "OLDVALUE3",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "All",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.02",
+      "ROLENAME": "Supplier4",
+      "ROLETYPE": "MM01",
+      "ROLEDESC": "UserID4",
+      "RISKTYPE": "SA",
+      "NUMBEROFUSERS": "93",
+      "SUPPLIERNAME": "SUPPLIERNAME4",
+      "TRANSACTIONDATE": "01-10-2020",
+      "NEWVALUE": "NEWVALUE4",
+      "OLDVALUE": "OLDVALUE4",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.01",
+      "ROLETYPE": "SE01",
+      "ROLENAME": "Supplier11",
+      "ROLEDESC": "UserID1",
+      "RISKTYPE": "SoD",
+      "NUMBEROFUSERS": "100",
+      "SUPPLIERNAME": "SUPPLIERNAME1",
+      "TRANSACTIONDATE": "08-10-2020",
+      "NEWVALUE": "NEWVALUE1",
+      "OLDVALUE": "OLDVALUE1",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.02",
+      "ROLENAME": "Supplier22",
+      "ROLETYPE": "SE38",
+      "ROLEDESC": "UserID2",
+      "RISKTYPE": "SA",
+      "NUMBEROFUSERS": "90",
+      "SUPPLIERNAME": "SUPPLIERNAME2",
+      "TRANSACTIONDATE": "08-09-2020",
+      "NEWVALUE": "NEWVALUE2",
+      "OLDVALUE": "OLDVALUE2",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.01",
+      "ROLETYPE": "MM01",
+      "ROLENAME": "Supplier33",
+      "ROLEDESC": "UserID3",
+      "RISKTYPE": "SoD",
+      "NUMBEROFUSERS": "101",
+      "SUPPLIERNAME": "SUPPLIERNAME3",
+      "TRANSACTIONDATE": "06-05-2020",
+      "NEWVALUE": "NEWVALUE3",
+      "OLDVALUE": "OLDVALUE3",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    },
+    {
+      "SYSTEM": "CWC",
+      "PERIOD": "MONTH",
+      "PERIODVALUE": "JAN-2020",
+      "RISKVIOLATION": "Risk 1.02",
+      "ROLENAME": "Supplier44",
+      "ROLETYPE": "MM01",
+      "ROLEDESC": "UserID4",
+      "RISKTYPE": "SA",
+      "NUMBEROFUSERS": "93",
+      "SUPPLIERNAME": "SUPPLIERNAME4",
+      "TRANSACTIONDATE": "01-10-2020",
+      "NEWVALUE": "NEWVALUE4",
+      "OLDVALUE": "OLDVALUE4",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL"
+    }
+  ],
+  "SupMaster": [
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "BALTUS00",
+      "VendorName": "Baltus AG Gr.00",
+      "AccGroup": "VEND",
+      "AccGrouPDesc.": "Vendors (external",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "",
+      "GLAccDesc": "",
+      "BankCountryKey": "",
+      "BankKeys": "",
+      "BankAccNumber": "",
+      "CountryKey": "",
+      "IS_BANK_MISSING": "",
+      "IS_ACC_INCORRECT": "",
+      "IS_BANK_INCORRECT": "",
+      "IS_PT_MISSING": "",
+      "Createdon": ""
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K521C12",
+      "VendorName": "Jotachi Deutschland AG",
+      "AccGroup": "ZTMM",
+      "AccGrouPDesc.": "Vendors Training",
+      "TermsofPaymentKey": "0002",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000160000",
+      "GLAccDesc": "",
+      "BankCountryKey": "",
+      "BankKeys": "",
+      "BankAccNumber": "",
+      "CountryKey": "DE",
+      "IS_BANK_MISSING": 1,
+      "IS_ACC_INCORRECT": 1,
+      "IS_BANK_INCORRECT": 1,
+      "IS_PT_MISSING": 0,
+      "Createdon": ""
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K521B20",
+      "VendorName": "Nordspeed GmbH",
+      "AccGroup": "ZTMM",
+      "AccGrouPDesc.": "Vendors Training",
+      "TermsofPaymentKey": "0002",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000160000",
+      "GLAccDesc": "",
+      "BankCountryKey": "",
+      "BankKeys": "",
+      "BankAccNumber": "",
+      "CountryKey": "DE",
+      "IS_BANK_MISSING": 1,
+      "IS_ACC_INCORRECT": 1,
+      "IS_BANK_INCORRECT": 1,
+      "IS_PT_MISSING": 0,
+      "Createdon": ""
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K500E12",
+      "VendorName": "Elektroblitz GmbH Gr.12",
+      "AccGroup": "LIEF",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000160000",
+      "GLAccDesc": "",
+      "BankCountryKey": "DE",
+      "BankKeys": 10010010,
+      "BankAccNumber": 767640584,
+      "CountryKey": "DE",
+      "IS_BANK_MISSING": 0,
+      "IS_ACC_INCORRECT": 0,
+      "IS_BANK_INCORRECT": 0,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    },
+    {
+      "SYSTEM": "All",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K515D30",
+      "VendorName": "Electronic Components Distributor",
+      "AccGroup": "LIEF",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000161000",
+      "GLAccDesc": "",
+      "BankCountryKey": "US",
+      "BankKeys": 134329042,
+      "BankAccNumber": 637475479,
+      "CountryKey": "US",
+      "IS_BANK_MISSING": 0,
+      "IS_ACC_INCORRECT": 0,
+      "IS_BANK_INCORRECT": 0,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    },
+    { "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K500E19",
+      "VendorName": "Elektroblitz GmbH Gr.19",
+      "AccGroup": "LIEF",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000160000",
+      "GLAccDesc": "",
+      "BankCountryKey": "DE",
+      "BankKeys": 10010010,
+      "BankAccNumber": 767640584,
+      "CountryKey": "DE",
+      "IS_BANK_MISSING": 0,
+      "IS_ACC_INCORRECT": 0,
+      "IS_BANK_INCORRECT": 0,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    },
+    { "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K515D19",
+      "VendorName": "Electronic Components Distributor",
+      "AccGroup": "LIEF",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000161000",
+      "GLAccDesc": "",
+      "BankCountryKey": "US",
+      "BankKeys": 134329042,
+      "BankAccNumber": 637475479,
+      "CountryKey": "US",
+      "IS_BANK_MISSING": 0,
+      "IS_ACC_INCORRECT": 0,
+      "IS_BANK_INCORRECT": 0,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    },
+    { "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K515D10",
+      "VendorName": "Electronic Components Distributor",
+      "AccGroup": "LIEF",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000161000",
+      "GLAccDesc": "",
+      "BankCountryKey": "US",
+      "BankKeys": 123123123,
+      "BankAccNumber": 736569845,
+      "CountryKey": "US",
+      "IS_BANK_MISSING": 0,
+      "IS_ACC_INCORRECT": 0,
+      "IS_BANK_INCORRECT": 0,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    },
+    { "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "SE308",
+      "VendorName": "Wei Guo International Inbd Vendor 1",
+      "AccGroup": "0001",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000160000",
+      "GLAccDesc": "",
+      "BankCountryKey": "",
+      "BankKeys": "",
+      "BankAccNumber": "",
+      "CountryKey": "CN",
+      "IS_BANK_MISSING": 1,
+      "IS_ACC_INCORRECT": 1,
+      "IS_BANK_INCORRECT": 1,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    },
+    { "SYSTEM": "CWC",
+      "PERIODVALUE": "JAN-2020",
+      "PERIOD": "MONTH",
+      "COMPANYCODE": "US20",
+      "ACCTGRP": "SCPL",
+      "CompanyCode": 1000,
+      "CompanyName": "BestRun Germany",
+      "Vendor": "T-K515D25",
+      "VendorName": "Electronic Components Distributor",
+      "AccGroup": "LIEF",
+      "AccGrouPDesc.": "Vendors",
+      "TermsofPaymentKey": "",
+      "TermofPayment": "",
+      "ReconciliationAccinGL": "0000161000",
+      "GLAccDesc": "",
+      "BankCountryKey": "US",
+      "BankKeys": 134329042,
+      "BankAccNumber": 637475479,
+      "CountryKey": "US",
+      "IS_BANK_MISSING": 0,
+      "IS_ACC_INCORRECT": 0,
+      "IS_BANK_INCORRECT": 0,
+      "IS_PT_MISSING": 1,
+      "Createdon": ""
+    }
+  ],
+  "Refreshed": [
+    {
+      "LastExecutionDate": "2020-10-05T00:00:00.000Z"
+    }
+  ],
+  "BAM_SETTINGS": [
+    {
+      "SYSTEM": "All",
+      "PERIOD": "ANNUAL",
+      "PERIODVALUE": "2020",
+      "TRENDLENGH": "5"
+    }
+  ]
+}
